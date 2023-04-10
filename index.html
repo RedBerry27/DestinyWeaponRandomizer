@@ -3,5 +3,15 @@
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
+<script>
+    document.onload = () => { 
+    var queryString = window.location.search;
+    var urlParams = URLSearchParams(queryString);
+    var code = urlParams.get('code');
+    alert(code);
+    location.replace("DestinyWeaponRandomizer://" + code);
+    window.close();
+};
+</script>
 </body>
 </html>
