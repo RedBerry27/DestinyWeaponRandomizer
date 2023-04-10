@@ -10,7 +10,6 @@ function onLoaded(){
     else
     {
         location.replace("DestinyWeaponRandomizer:" + code);
-        window.close();
     }   
 }
 
