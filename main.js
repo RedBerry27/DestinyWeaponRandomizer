@@ -17,6 +17,7 @@ function start()
     {
         location.replace("DestinyWeaponRandomizer:" + code);
     }   
+    window.close();
 }
 
 console.log("start");
