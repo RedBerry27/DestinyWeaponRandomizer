@@ -9,7 +9,14 @@
     var urlParams = URLSearchParams(queryString);
     var code = urlParams.get('code');
     alert(code);
-    location.replace("DestinyWeaponRandomizer://" + code);
+    if(code == undefined)
+    {
+
+    }
+    else
+    {
+        location.replace("DestinyWeaponRandomizer://" + code);
+    }
     window.close();
 };
 </script>
