@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<script>
-    document.onload = () => { 
-    var queryString = window.location.search;
-    var urlParams = URLSearchParams(queryString);
-    var code = urlParams.get('code');
-    alert(code);
-    if(code == undefined)
-    {
 
-    }
-    else
-    {
-        location.replace("DestinyWeaponRandomizer://" + code);
-    }
-    window.close();
-};
-</script>
+<head>
+    <script src="main.js"></script>
+</head>
+
+<body onload="onLoaded()">
+    <h1>Hello World</h1>
+    <p>I'm hosted with GitHub Pages.</p>
+
+    </script>
 </body>
+
 </html>
