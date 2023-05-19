@@ -9,10 +9,10 @@ function start()
     var code = urlParams.get('code');
     if(code == null)
     {
-        location.replace("DestinyWeaponRandomizer:0");
+        location.replace("https://localhost:7186");
     }
     else
     {
-        location.replace("DestinyWeaponRandomizer:" + code);
+        location.replace("https://localhost:7186/token?code=" + code);
     }   
 }
