@@ -14,6 +14,6 @@ function start()
     }
     else
     {
-        location.replace("https://localhost:7186/bungieToken?code=" + code + "&state=" + state);
+        location.replace("https://localhost:7186/redirect?code=" + code + "&state=" + state);
     }   
 }
