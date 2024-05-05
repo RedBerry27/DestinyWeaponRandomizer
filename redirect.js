@@ -1,6 +1,6 @@
 var titleElement;
 var localStorage = window.localStorage;
-var tokenEndpoint = "https://www.bungie.net/platform/app/oauth/token/";
+var tokenEndpoint = "https://www.bungie.net/platform/app/oauth/token";
 
 function onLoaded() {
     titleElement = document.getElementById("title");
