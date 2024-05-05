@@ -12,7 +12,7 @@ function start() {
     var urlParams = new URLSearchParams(queryString);
     var code = urlParams.get('code');
     var state = urlParams.get('state');
-    let tokenUrl = new URL(tokenEndpoint + "?grant_type=authorization_code&client_id=46794&code=" + code);
+    let tokenUrl = new URL(tokenEndpoint + "?grant_type=authorization_code&client_id=46814&client_secret=a4CdT2MmsbqzVZOl1BzwGWXXUdIxSx6L1NNMrgHxhAc&code=" + code);
     console.log(tokenUrl);
     console.log(tokenUrl.toString());
 
