@@ -15,7 +15,7 @@ function onLoaded(){
     // }
     $("#authButton").click(function (e) { 
         e.preventDefault();
-        location.replace(authorizationEndpoint + "client_id=46794&response_type=code");
+        location.replace(authorizationEndpoint + "?client_id=46794&response_type=code");
     });
 }
 

@@ -18,7 +18,7 @@ function start()
     if(code != null){
         $.ajax({
             type: "POST",
-            url: tokenEndpoint + "grant_type=authorization_code&code=" + code,
+            url: tokenEndpoint + "?grant_type=authorization_code&code=" + code,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             dataType: "json",
             success: function (response) {
