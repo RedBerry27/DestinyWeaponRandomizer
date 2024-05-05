@@ -14,6 +14,7 @@ function start() {
     var state = urlParams.get('state');
     let tokenUrl = new URL(tokenEndpoint + "?grant_type=authorization_code&client_id=46794&code=" + code);
     console.log(tokenUrl);
+    console.log(tokenUrl.toString());
 
     if (code != null) {
         let response = fetch(tokenUrl,{
@@ -24,6 +25,8 @@ function start() {
                 "Access-Control-Allow-Origin":"*"
             }
         })
+
+        console.log(response);
 
         if(response.ok){
             let jsonResponse = response.json();
