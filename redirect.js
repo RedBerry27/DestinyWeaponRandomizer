@@ -12,14 +12,16 @@ function start() {
     var urlParams = new URLSearchParams(queryString);
     var code = urlParams.get('code');
     var state = urlParams.get('state');
-    let tokenUrl = new URL(tokenEndpoint + "grant_type=authorization_code&client_id=46794&code=" + code);
+    let tokenUrl = new URL(tokenEndpoint + "?grant_type=authorization_code&client_id=46794&code=" + code);
     console.log(tokenUrl);
 
     if (code != null) {
         let response = fetch(tokenUrl,{
             method:"POST",
+            mode:"no-cors",
             headers:{
-                "Content-Type": 'application/x-www-form-urlencoded'
+                "Content-Type": 'application/x-www-form-urlencoded',
+                "Access-Control-Allow-Origin":"*"
             }
         })
 
