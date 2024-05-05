@@ -26,8 +26,9 @@ function start() {
         })
 
         if(response.ok){
-            console.log(response);
-            localStorage.setItem("authorization", JSON.stringify.response);
+            let jsonResponse = response.json();
+            console.log(jsonResponse);
+            localStorage.setItem("authorization", JSON.stringify(jsonResponse));
             location.replace("/index.html");
         }
         else{
