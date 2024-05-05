@@ -1,7 +1,7 @@
 var titleElement;
 var localStorage = window.localStorage;
 var authorizationEndpoint = "https://www.bungie.net/en/oauth/authorize";
-var tokenEndpoint = "https://www.bungie.net/platform/app/oauth/token/"
+var tokenEndpoint = "https://www.bungie.net/platform/app/oauth/token/";
 
 function onLoaded(){
     titleElement = document.getElementById("title");
