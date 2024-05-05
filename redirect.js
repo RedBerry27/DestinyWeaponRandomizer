@@ -3,10 +3,8 @@ var localStorage = window.localStorage;
 
 function onLoaded(){
     titleElement = document.getElementById("title");
-    setTimeout(start, 1500);
+    setTimeout(start, 1000);
 }
-
-
 
 function start()
 {
