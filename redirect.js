@@ -12,10 +12,8 @@ function start() {
     var urlParams = new URLSearchParams(queryString);
     var code = urlParams.get('code');
     var state = urlParams.get('state');
-    let tokenUrl = new URL(tokenEndpoint);
-    tokenUrl.searchParams.append("grant_type", "authorization_code");
-    tokenUrl.searchParams.append("client_id", 46794);
-    tokenUrl.searchParams.append("code", code);
+    let tokenUrl = new URL(tokenEndpoint + "grant_type=authorization_code&client_id=46794&code=" + code);
+    console.log(tokenUrl);
 
     if (code != null) {
         let response = fetch(tokenUrl,{
@@ -29,7 +27,7 @@ function start() {
             let jsonResponse = response.json();
             console.log(jsonResponse);
             localStorage.setItem("authorization", JSON.stringify(jsonResponse));
-            location.replace("/index.html");
+            //location.replace("/index.html");
         }
         else{
             console.log("ERROR");
