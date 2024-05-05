@@ -12,8 +12,9 @@ function start() {
     var urlParams = new URLSearchParams(queryString);
     var code = urlParams.get('code');
     var state = urlParams.get('state');
-    let tokenUrl = new URL(tokenEndpoint + "?grant_type=authorization_code&client_id=46794&code=" + code);
+    let tokenUrl = new URL(tokenEndpoint + "?grant_type=authorization_code&code=" + code);
     console.log(tokenUrl);
+    let base64 = btoa(46794);
 
     if (code != null) {
         let response = fetch(tokenUrl,{
@@ -21,7 +22,8 @@ function start() {
             mode:"no-cors",
             headers:{
                 "Content-Type": 'application/x-www-form-urlencoded',
-                "Access-Control-Allow-Origin":"*"
+                "Access-Control-Allow-Origin":"*",
+                "Authorization": "Basic " + base64
             }
         })
 
