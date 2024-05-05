@@ -12,18 +12,25 @@ function start() {
     var urlParams = new URLSearchParams(queryString);
     var code = urlParams.get('code');
     var state = urlParams.get('state');
-    let tokenUrl = new URL(tokenEndpoint + "?grant_type=authorization_code&client_id=46814&client_secret=a4CdT2MmsbqzVZOl1BzwGWXXUdIxSx6L1NNMrgHxhAc&code=" + code);
+    let tokenUrl = new URL(tokenEndpoint);
     console.log(tokenUrl);
     console.log(tokenUrl.toString());
 
     if (code != null) {
+        let formData = new FormData();
+        formData.append("grant_type","authorization_code");
+        formData.append("client_id","46814");
+        formData.append("client_secret","a4CdT2MmsbqzVZOl1BzwGWXXUdIxSx6L1NNMrgHxhAc");
+        formData.append("code",code);
+
         let response = fetch(tokenUrl,{
             method:"POST",
             mode:"no-cors",
             headers:{
                 "Content-Type": 'application/x-www-form-urlencoded',
                 "Access-Control-Allow-Origin":"*"
-            }
+            },
+            body: formData
         })
 
         console.log(response);
