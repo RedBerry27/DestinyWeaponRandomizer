@@ -13,13 +13,25 @@
         *{
             padding: 0;
             margin: 0;
-            
+            height: 100%;
         }
-        .mainButton{
+        #cabbageButton{
+            --custom-size:300px;
+            width: var(--custom-size);
+            height: var(--custom-size);
+            display: flex;
+            
+            vertical-align: middle;
+        }
+        .cabbageContainer{
+            display: flex;
+            align-items: center;
+            align-self: center;
+            margin-top: auto;
+            margin-bottom: 20%;
             width: 300px;
             height: 300px;
-            display: flex;
-            align-self: center;
+            justify-content: space-around;
         }
         .mainContainer{
             min-height: 100%;
@@ -28,16 +40,21 @@
             flex-direction: column;
         }
         #cabbageCount{
+            margin-top: 5%;
             align-self: center;
-            font-size: 60px;
+            text-align: center;
+            font-size: 40px;
             display: flex;
+            max-height: 10%;
         }
     </style>
 </head>
 <body>
     <div class="mainContainer">
         <p id="cabbageCount">0</p>
-        <img src="cabbage.png" id="mainButton" class="mainButton" onclick="handleClick()"/>
+        <div id="cabbageTapContainer" class="cabbageContainer" onclick="handleClick()">
+            <img src="cabbage.png" id="cabbageButton" class="mainButton" />
+        </div>
         <script src="index.js"></script>
     </div>
 </body>
