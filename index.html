@@ -16,20 +16,25 @@
             
         }
         .mainButton{
-            width: 400px;
-            height: 200px;
-            
+            width: 300px;
+            height: 300px;
+            display: flex;
         }
         .mainContainer{
             min-height: 100%;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        #cabbageCount{
             display: flex;
         }
     </style>
 </head>
 <body>
     <div class="mainContainer">
-        <button id="mainButton" class="mainButton" onclick="handleClick()">BBBB</button>
+        <p id="cabbageCount">0</p>
+        <img src="cabbage.png" id="mainButton" class="mainButton" onclick="handleClick()"/>
         <script src="index.js"></script>
     </div>
 </body>
