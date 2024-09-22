@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <script src="index.js"></script>
-    <script src="jquery.min.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="MobileOptimized" content="176" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="robots" content="noindex,nofollow" />
+    <script src="https://telegram.org/js/telegram-web-app.js?2"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            
+        }
+        .mainButton{
+            width: 400px;
+            height: 200px;
+            
+        }
+        .mainContainer{
+            min-height: 100%;
+            width: 100%;
+            display: flex;
+        }
+    </style>
 </head>
-
-<body onload="onLoaded()">
-    <div id="main">
-        <div id="authPage">
-            <h1 id="title">DestinySeasonRewardClaimer</h1>
-            <p id="desc">Нужно ваше разрешение, чтобы просматривать прогресс ваших персонажей</p>
-            <button id="authButton">Авторизоваться с помощью Bungie.net</button>
-        </div>
+<body>
+    <div class="mainContainer">
+        <button id="mainButton" class="mainButton" onclick="handleClick()">BBBB</button>
+        <script src="index.js"></script>
     </div>
 </body>
-
 </html>
